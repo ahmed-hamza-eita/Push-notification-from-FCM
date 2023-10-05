@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583461436946",
+    "project_id": "push-notification-from-fcm",
+    "storage_bucket": "push-notification-from-fcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583461436946:android:7d25ea9da94c58a829e2cb",
+        "android_client_info": {
+          "package_name": "com.hamza.pushnotificationfromfcm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXdsyvzrQdjSNkDnlh76Zai9463c6k6X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
