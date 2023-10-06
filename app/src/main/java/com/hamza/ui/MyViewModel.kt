@@ -16,8 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MyViewModel @Inject constructor(private val api: ApiCalls) : ViewModel() {
 
-//    private val _error = MutableStateFlow("")
-//    val error get() = _error.asLiveData()
+
 
 
     private val _response = MutableLiveData<NetworkState>()
