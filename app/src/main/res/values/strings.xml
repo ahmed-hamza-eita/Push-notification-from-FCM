@@ -1,3 +1,7 @@
 <resources>
+    <string name="default_notification_channel_id" translatable="false">id channel</string>
+
     <string name="app_name">Push notification from FCM</string>
+    <string name="push">Push</string>
+    <string name="hello_world">Hello World!!</string>
 </resources>

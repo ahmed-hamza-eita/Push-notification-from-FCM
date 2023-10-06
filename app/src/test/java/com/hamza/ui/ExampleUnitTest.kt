@@ -1,4 +1,4 @@
-package com.hamza.pushnotificationfromfcm
+package com.hamza.ui
 
 import org.junit.Test
 
