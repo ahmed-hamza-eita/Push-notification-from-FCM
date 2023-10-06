@@ -19,24 +19,24 @@ class MyViewModel @Inject constructor(private val api: ApiCalls) : ViewModel() {
 
 
 
-    private val _response = MutableLiveData<NetworkState>()
+    private val _response = MutableStateFlow<NetworkState?>(null)
     val response get() = _response
 
     fun sendNotification(model: NotificationModel) {
-        _response.postValue(NetworkState.LOADING)
-        viewModelScope.launch {
 
+        viewModelScope.launch {
+            _response.emit(NetworkState.LOADING)
             try {
                 val result = api.sendNotification(model)
                 if (result.isSuccessful)
-                    _response.postValue(NetworkState.getLoaded(result.body()))
+                    _response.emit(NetworkState.getLoaded(result.body()))
                 else {
-                    _response.postValue(NetworkState.getErrorMessage(result.errorBody().toString()))
+                    _response.emit(NetworkState.getErrorMessage(result.errorBody().toString()))
                 }
 
             } catch (e: Exception) {
                 e.printStackTrace()
-                _response.postValue(NetworkState.Companion.getErrorMessage(e.message.toString()))
+                _response.emit(NetworkState.Companion.getErrorMessage(e.message.toString()))
             }
         }
     }
