@@ -12,7 +12,7 @@ interface ApiCalls {
 
     // this is my own token i used it for testing
     @Headers(
-        "Authorization: key=AAAAh9kC_hI:APA91bH5tot1CVbay6uA_qm6RDYj3aIK1FlIxXtDjKkZGbvqRPifjLwehKhoAhEBsz9r53XoxWsp1YQuVFhraWIWh5cdd5NdIVHdGaADbP8HVfyW5tIrMqhxqwhw6WIEGj8AnPgm6Pz0",
+        "Authorization: key= your token",
         "Content-Type:application/json"
     )
 
